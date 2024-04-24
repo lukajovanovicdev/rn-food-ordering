@@ -100,7 +100,7 @@ const CreateProductScreen = () => {
       {isUpdating && (
         <Text
           onPress={confirmDelete}
-          className="text-red-600 text-lg font-bold underline cursor-pointer"
+          className="text-red-600 text-lg font-bold underline cursor-pointer mx-auto"
         >
           Delete
         </Text>
