@@ -39,7 +39,7 @@ const CreateProductScreen = () => {
   };
 
   const onSubmit = () => {
-    if (isUpdating) onUpdate;
+    if (isUpdating) onUpdate();
     else onCreate();
   };
 
