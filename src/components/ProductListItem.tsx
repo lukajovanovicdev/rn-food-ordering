@@ -7,8 +7,10 @@ import { Link, useSegments } from 'expo-router';
 export const ProductListItem = ({ product }: { product: Product }) => {
   const segments = useSegments();
 
+  if (!segments[0]) return null;
+
   return (
-    <Link href={`${segments[0]}/menu/${product.id}`} style={{ marginTop: 10 }} asChild>
+    <Link href={`/${segments[0]}/menu/${product.id}`} style={{ marginTop: 10 }} asChild>
       <Pressable style={styles.container}>
         {product.image && (
           <Image style={styles.image} source={{ uri: product.image }} resizeMode="contain" />
